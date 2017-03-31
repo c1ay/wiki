@@ -3,3 +3,5 @@
 
 ## 安装依赖:
 `pip install simiki`
+
+[demo](http://blog.c1ay.cc/wiki/output/)
