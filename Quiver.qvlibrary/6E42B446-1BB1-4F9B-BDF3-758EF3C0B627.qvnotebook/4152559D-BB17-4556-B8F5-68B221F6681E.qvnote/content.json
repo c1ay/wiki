@@ -1,0 +1,13 @@
+{
+  "title": "让用户拥有使用docker命令的权限",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "一般docker安装后，只有`root` 才有权限操作，其他用户使用`docker`命令，只有加`sudo`"
+    },
+    {
+      "type": "markdown",
+      "data": "操作顺序\n1. `sudo cat /etc/group | grep docker`\n2. 如果不存在`docker`组，可以添加`sudo groupadd docker`\n3. 添加当前用户到`docker`组，`sudo gpasswd -a ${USER} docker`\n4. 重启`docker`服务,`sudo systemctl restart docker`\n5. 如果权限不够，`sudo chmod a+rw /var/run/docker.sock`"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "使用openssl 解密登陆密钥",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div style=\"text-align: center;\"><span style=\"color: rgb(36, 41, 46); font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 16px; orphans: 2; widows: 2; background-color: rgb(255, 255, 255);\">用openssl 解密有密码的密钥，解密后用密钥登陆不用输入密码</span></div>"
+    },
+    {
+      "type": "code",
+      "language": "sh",
+      "data": "openssl rsa -in rsa.pem -out rsa_pri.pem"
+    },
+    {
+      "type": "markdown",
+      "data": "> rsa.pem 为有密码的密钥，rsa_pri.pem 为解密后的密钥"
+    }
+  ]
+}
